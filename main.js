@@ -35,13 +35,20 @@ new Vue({
   el: '#app2',
   data: {
     attachedRed: false,
-    color: 'green'
+    color: 'green',
+    width: 100
   },
   computed: {
     divClasses: function() {
       return {
         red: this.attachedRed,
         blue: !this.attachedRed
+      }
+    },
+    myStyle: function () {
+      return {
+        backgroundColor: this.color,
+        width: this.width + 'px'
       }
     }
   }
