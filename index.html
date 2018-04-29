@@ -58,6 +58,9 @@
       <p> Inside a template</p>
     </template>
     <p v-show='show'> Do you also see me</p>
+    <ul>
+      <li v-for='ingredient in ingredients'>  {{ ingredient}}</li>
+    </ul>
     <button @click=' show = !show'> Switch!</button>
 
   </div>

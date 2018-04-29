@@ -57,6 +57,11 @@ new Vue({
 new Vue({
   el: '#app3',
   data: {
-    show: true
+    show: true,
+    ingredients: ['meat', 'fruit', 'cookies', 'milk'],
+    persons: [
+      {name: 'Paul', age: 29, color: 'green' },
+      {name: 'Joesphine', age: 59, color: 'blue'}
+    ]
   }
 })
