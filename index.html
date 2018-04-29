@@ -38,8 +38,10 @@
   <hr>
   <div id='app2'>
     <div class='demo' @click='attachedRed = !attachedRed' :class='divClasses'></div>
-    <div class='demo'></div>
+    <div class='demo' :class='[color, { red: attachedRed}]'></div>
     <div class='demo' @click='attachedRed = !attachedRed' :class='{ red: attachedRed}'></div>
+    <br>
+    <input type='text' v-model='color'>
   </div>
   <script src="vue.js" ></script>
   <!-- <script src="vuex.js" ></script> -->
