@@ -4,6 +4,26 @@
     <link rel='stylesheet' type='text/css' href='style.css'>
 
   </head>
+  <style>
+    .demo {
+      width: 100px;
+      height: 100px;
+      background-color: gray;
+      display: inline-block;
+      margin: 10px;
+    }
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+  </style>
   <body>
    </body>
   <div id="app">
@@ -14,6 +34,12 @@
    Coordinates: {{ x }} / {{ y}}
   -<span v-on:mousemove.stop=''> DEAD SPOT</span> </p>
   <input type='text' v-on:keyup.space.enter='alertMe'>
+  </div>
+  <hr>
+  <div id='app2'>
+    <div class='demo' @click='attachedRed = !attachedRed' :class='divClasses'></div>
+    <div class='demo'></div>
+    <div class='demo' @click='attachedRed = !attachedRed' :class='{ red: attachedRed}'></div>
   </div>
   <script src="vue.js" ></script>
   <!-- <script src="vuex.js" ></script> -->

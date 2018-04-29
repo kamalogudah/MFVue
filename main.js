@@ -18,7 +18,7 @@ new Vue({
 
     },
     alertMe() {
-      alert('Alert!');      
+      alert('Alert!'); 
     }
   },
   watch: {
@@ -27,6 +27,21 @@ new Vue({
       setTimeout(function(){
         vm.counter = 0;
       }, 2000);
+    }
+  }
+})
+
+new Vue({
+  el: '#app2',
+  data: {
+    attachedRed: false
+  },
+  computed: {
+    divClasses: function() {
+      return {
+        red: this.attachedRed,
+        blue: !this.attachedRed
+      }
     }
   }
 })
