@@ -59,7 +59,7 @@
     </template>
     <p v-show='show'> Do you also see me</p>
     <ul>
-      <li v-for='ingredient in ingredients'>  {{ ingredient}}</li>
+      <li v-for='(ingredient, i) in ingredients'>  {{ ingredient}} ({{ i }})</li>
     </ul>
     <button @click=' show = !show'> Switch!</button>
 
