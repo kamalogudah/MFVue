@@ -53,3 +53,10 @@ new Vue({
     }
   }
 })
+
+new Vue({
+  el: '#app3',
+  data: {
+    show: true
+  }
+})

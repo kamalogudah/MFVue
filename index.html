@@ -36,6 +36,7 @@
   <input type='text' v-on:keyup.space.enter='alertMe'>
   </div>
   <hr>
+  <h1>Interacting with the Dom</h1>
   <div id='app2'>
     <div class='demo' @click='attachedRed = !attachedRed' :class='divClasses'></div>
     <div class='demo' :class='[color, { red: attachedRed}]'></div>
@@ -47,6 +48,14 @@
     <br>
     <input type='text' v-model='color'>
     <input type='text' v-model='width'>
+  </div>
+  <h1> Conditionals and Rendering List </h1>
+  <div id='app3'>
+    <p v-if='show'> You can see me</p>
+    <p v-else>Now you see me</p>
+    <p> Do you also see me</p>
+    <button @click=' show = !show'> Switch!</button>
+
   </div>
   <script src="vue.js" ></script>
   <!-- <script src="vuex.js" ></script> -->
